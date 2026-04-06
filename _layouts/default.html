@@ -1,13 +1,57 @@
 <html>
+  <head>
+    <title>{{ page.title }}</title>
+    <style>
+      body {
+        background-color: #cccccc;
+        font-family: Arial, sans-serif;
+      }
+
+      a {
+        color: blue;
+      }
+
+      .container {
+        width: 800px;
+        margin: auto;
+        background: white;
+        border: 2px solid black;
+        padding: 10px;
+      }
+
+      .header {
+        text-align: center;
+        background: navy;
+        color: white;
+        padding: 10px;
+      }
+
+      .nav {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .content {
+        margin: 10px;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
   <body>
-    {% include header.html %}
+    <div class="container">
+      {% include header.html %}
 
-    <hr>
+      <div class="content">
+        {{ content }}
+      </div>
 
-    {{ content }}
-
-    <hr>
-
-    {% include footer.html %}
+      {% include footer.html %}
+    </div>
   </body>
 </html>
